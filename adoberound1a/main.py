@@ -24,9 +24,6 @@ def load_model():
         device="cuda" if torch.cuda.is_available() else "cpu",
         extra_config=[
             "MODEL.ROI_HEADS.SCORE_THRESH_TEST", 0.85,
-            "MODEL.ROI_HEADS.NMS_THRESH_TEST", 0.3,
-            "MODEL.RPN.PRE_NMS_TOPK_TEST", 1000,
-            "MODEL.RPN.POST_NMS_TOPK_TEST", 500
         ]
     )
 
